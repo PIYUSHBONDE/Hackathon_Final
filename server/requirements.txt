@@ -11,3 +11,4 @@ nltk
 pdfminer.six
 lime
 python-dotenv
+gunicorn
