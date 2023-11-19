@@ -1,0 +1,38 @@
+<app-navbar
+  (siblingNavbarContainer)="navbarContainer = $event"
+  (siblingAbout)="aboutLink = $event"
+  (siblingSavedPredictions)="savedPredictionsLink = $event"
+  (siblingPredictDataset)="predictDatasetLink = $event"
+  (siblingContactUs)="contactUsLink = $event"
+  (siblingNavBrand)="navBrand = $event"
+  (siblingHome)="home = $event"
+  (siblingFeature)="featureLink = $event"
+  (siblingSamples)="samplesLink = $event"
+  (siblingMoreInfo)="moreInfoLink = $event"
+></app-navbar>
+
+<div id="fraudPredictionDiv" data-aos="zoom-out">
+  <div class="container">
+    <h4 class="predictDatasetHeading">Fraud Predictor</h4>
+    <div class="card predictDatasetCard">
+      <div class="card-body">
+        <form [formGroup]="fraudForm" (ngSubmit)="onSubmit()">
+          <div class="form-group container">
+            <label for="message" class="titleLabel">Message:</label>
+            <textarea id="message" formControlName="message" class="form-control shadow-none"></textarea>
+            <button type="submit" class="btn btn-primary">Predict Fraud</button>
+          </div>
+        </form>
+
+        <div *ngIf="predictionResult" class="result-container">
+            <h1>Result</h1>
+            <p><strong>Message:</strong> {{ fraudForm.value.message }}</p>
+            <p><strong>Prediction:</strong> {{ predictionResult }}</p>
+            <h3>Explanation:</h3>
+            <p>{{ explanation }}</p>
+        </div>
+        <!-- <div *ngIf="predictionResult" class="result-container" [innerHTML]="explanation"></div> -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+/* fraud.component.css */
+
+#fraudPredictionDiv {
+    font-family: "Inter", sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 5em;
+  }
+  
+  .predictDatasetCard {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background-color: #ffffff;
+  }
+  
+  .predictDatasetHeading {
+    text-align: center;
+    padding-bottom: 0.8em;
+    color: #343a40;
+  }
+  
+  form {
+    text-align: center;
+  }
+  
+  button {
+    margin-top: 1em;
+    color: #ffffff;
+    background-color: #343a40;
+  }
+  
+  .result-container {
+    margin-top: 2em; /* Adjust the margin as needed */
+    padding: 1em;
+    background-color: #f8f9fa; /* Match the background color in result1.html */
+    border-radius: 8px;
+  }
+  
+  .result-container h1,
+  .result-container h3,
+  .result-container p {
+    margin-bottom: 1em;
+  }
+  
+  /* Add any additional styling as needed */
+  
