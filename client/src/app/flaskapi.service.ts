@@ -16,7 +16,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class FlaskapiService {
   constructor(private httpClient: HttpClient) {}
 
-  public server: string = 'http://localhost:5000/';
+  public server: string = 'https://retirement.onrender.com/';
 
   public getCurrentPrediction(email: any) {
     return this.httpClient.get<GetPrediction>(
@@ -106,20 +106,20 @@ export class FlaskapiService {
 
   public predict(data: any): Observable<GetInvestment> {
     // Assuming you have an endpoint for prediction in your Flask API
-    const predictEndpoint = 'http://localhost:5000/predict';
+    const predictEndpoint = 'https://retirement.onrender.com/predict';
 
     return this.httpClient.post<GetInvestment>(predictEndpoint, data);
   }
 
   public predictFraud(data: any): Observable<any> {
     // Assuming you have an endpoint for fraud prediction in your Flask API
-    const predictFraudEndpoint = 'http://localhost:5000/predict-fraud';
+    const predictFraudEndpoint = 'https://retirement.onrender.com/predict-fraud';
 
     return this.httpClient.post<any>(predictFraudEndpoint, data);
   }
 
   public predictJob(data: any): Observable<any> {
-    const predictJobEndpoint = 'http://localhost:5000/predict-job';
+    const predictJobEndpoint = 'https://retirement.onrender.com/predict-job';
   
     const formData: FormData = new FormData();
     formData.append('resume_file', data.resumeFile);
