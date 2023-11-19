@@ -7,8 +7,12 @@
 # On macOS/Linux:
 # source venv/bin/activate
 
+python -m pip install --upgrade pip
+
 # Install the required packages
 pip install flask flask-cors pymongo joblib pandas numpy statsmodels scikit-learn passlib nltk pdfminer.six lime python-dotenv
 
 # Freeze the installed packages and save them to requirements.txt
 # pip freeze > requirements.txt
+
+
