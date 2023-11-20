@@ -7,6 +7,8 @@ import {
   ViewChild,
 } from '@angular/core';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -21,7 +23,7 @@ export class HeaderComponent implements OnInit {
   @Output() siblingSamples = new EventEmitter();
   @Output() siblingHeader = new EventEmitter();
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     if (localStorage.getItem('name')) {
@@ -35,5 +37,14 @@ export class HeaderComponent implements OnInit {
   ngAfterViewInit(): void {
     this.siblingSamples.emit(this.siblingSamplesLink);
     this.siblingHeader.emit(this.siblingheaderDiv);
+  }
+
+  navigateToPredictInvestment() {
+    this.router.navigate(['/predict-investment']);
+  }
+
+  // Add a method to navigate to the '/predict-fraud' route
+  navigateToPredictFraud() {
+    this.router.navigate(['/predict-fraud']);
   }
 }

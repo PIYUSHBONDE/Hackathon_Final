@@ -62,10 +62,10 @@ export class InvestmentComponent implements OnInit {
       'style',
       'display: none !important'
     );
-    this.predictDatasetLink.nativeElement.setAttribute(
-      'style',
-      'color: white !important'
-    );
+    // this.predictDatasetLink.nativeElement.setAttribute(
+    //   'style',
+    //   'color: white !important'
+    // );
 
     this.contactUsLink.nativeElement.setAttribute(
       'style',

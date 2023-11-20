@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
     });
 
     this.samplesLink.nativeElement.addEventListener('click', () => {
-      this.samples.nativeElement.scrollIntoView({
+      this.contactUs.nativeElement.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
         inline: 'nearest',
